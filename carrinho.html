@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Carrinho</title>
+  </head>
+  <body>
+    
+    <header id="header">
+      <div class="container">
+        <div class="flex-box">
+          <a href="/index.html" class="logo">
+            <img id="logo"
+              src="./assets/logo.png"
+              alt="logo_empresa"
+            />
+          </a>
+          <nav class="menu">
+            <ul>
+              <li>
+                <a href="./index.html#sobre"> Sobre </a>
+              </li>
+            </ul>
+            <a href="./carrinho.html" class="btn outline">
+              Quero minha viagem!
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section id="carrinho">
+      <div class="container">
+        <div class="flex-box">
+          <div class="left">
+            <h1 class="title two">Finalizar a compra</h1>
+            <ul class="ticket-list">
+              
+              <li class="ticket">
+                <form oninput="ValorViagem()" method="post" class="title formulario"> 
+                <fieldset>
+                  <legend> Destinos </legend>
+                    <p><label for="destino1">Rio de Janeiro </label><input type="radio" name="destino" id="destino1" value="300" required checked></p>
+                    <p><label for="destino2">Gramado </label><input type="radio" name="destino" id="destino2" value="250" ></p>
+                    <p><label for="destino3">Fortaleza </label><input type="radio" name="destino" id="destino3" value="200"></p>
+                    <p><label for="destino4">Salvador </label><input type="radio" name="destino" id="destino4" value="400"></p>
+                </fieldset>
+                <fieldset>
+                  <legend> Dias </legend>
+                    <p><label for="dias3">3 dias </label><input type="radio" name="dias" id="dias3" value="3" required checked></p>
+                    <p><label for="dias7">7 dias </label><input type="radio" name="dias" id="dias7" value="7"></p>
+                    <p><label for="dias10">10 dias </label><input type="radio" name="dias" id="dias10" value="10"></p>
+                    <p><label for="dias15">15 dias </label><input type="radio" name="dias" id="dias15" value="15"></p>
+                </fieldset>
+                <fieldset>
+                  <legend> Adicionais </legend>
+                    <p><label for="cafe">Café da manhã incluso</label><input type="checkbox" name="cafe" id="cafe" value="50"></p>
+                    <p><label for="guia">guia turistico</label><input type="checkbox" name="guia" id="guia" value="150"></p>
+                </fieldset>
+                </form>
+                <div class="price">
+                  <div class="controls">
+                    <button id="remove-ticket">-</button>
+                    <span id="ticket"> 0 </span>
+                    <button id="add-ticket">+</button>
+                  </div>
+                  <p class="title three">R$ <span id="ticket-price">0</span>,00 valor total</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="right">
+            <h2 class="title three pad20-bottom">Preencha os campos</h2>
+            
+            <form class="form" id="cart-form">
+              <input type="text" name="nome" id="nome" placeholder="Seu nome" required />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Seu e-mail"
+                required
+              />
+              <button type="submit" id="buy-button" class="btn solid">Finalizar comprar</button>
+            </form>
+          </div>      
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="./script.js"></script>
+</html>
